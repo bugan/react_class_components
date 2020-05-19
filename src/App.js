@@ -1,15 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import BarraBusca from "./componentes/BarraBusca";
-import MenuCategorias from "./componentes/MenuCategorias";
-import ContainerCategorias from "./componentes/ConteinerNotas";
+import BarraBusca from "./componentes/BarraBusca/BarraBusca";
+import MenuCategorias from "./componentes/MenuCategorias/MenuCategorias";
+import ContainerCategorias from "./componentes/ContainerNotas/ContainerNotas";
 function App() {
   return (
     <div className="App">
       <BarraBusca />
-      <MenuCategorias />
-      <ContainerCategorias />
+      <section class="conteudo_container">
+        <MenuCategorias />
+        <ContainerCategorias />
+      </section>
     </div>
   );
 }

@@ -1,32 +1,10 @@
 .container-notas {
   background-color: #fff8ff;
-  flex-grow: 6;
 }
 
-.container-notas_cabecalho {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 4px;
-  padding-left: 24px;
-}
-
-.container-notas_cabecalho button {
-  border: none;
-  border-radius: 8px;
-  background-color: #d8dbe2;
-  font-size: 0.9em;
-  padding: 4px;
-  margin: 4px;
-  width: 52px;
-  height: 24px;
-}
-
-.container-notas_cabecalho button:active {
-  background-color: #a9bcd0;
-}
 .container-notas_lista {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   flex-wrap: wrap;
   list-style-type: none;
   padding-left: 24px;

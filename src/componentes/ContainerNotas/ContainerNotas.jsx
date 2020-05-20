@@ -2,14 +2,11 @@ import React, { Component } from "react";
 import Card from "../Cards/Cards";
 import "./estilo.css";
 
-class ContainerCategorias extends Component {
+class ContainerNotas extends Component {
   state = {};
   render() {
     return (
       <main class="container-notas">
-        <header class="container-notas_cabecalho">
-          <button>Criar</button>
-        </header>
         <ul class="container-notas_lista">
           <li class="container-notas_item">
             <Card />
@@ -35,4 +32,4 @@ class ContainerCategorias extends Component {
   }
 }
 
-export default ContainerCategorias;
+export default ContainerNotas;

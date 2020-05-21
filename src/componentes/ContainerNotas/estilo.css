@@ -1,14 +1,17 @@
 .container-notas {
-  background-color: #fff8ff;
+  background-color: var(--fundo);
+  flex-grow: 3;
 }
 
 .container-notas_lista {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  flex-wrap: wrap;
+  grid-template-columns: auto auto auto;
   list-style-type: none;
   padding-left: 24px;
+  padding-top: 24px;
 }
 .container-notas_item {
-  margin: 4px;
+  margin: 12px;
+  max-width: 240px;
+  max-height: 400px;
 }

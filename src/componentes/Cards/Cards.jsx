@@ -6,8 +6,8 @@ class Card extends Component {
   render() {
     return (
       <section class="card">
-        <header class="card_titulo">
-          <h3>Titulo</h3>
+        <header class="card_cabecalho">
+          <h3 class="card_titulo">Titulo</h3>
           <div class="card_titulo_categoria">Categoria</div>
         </header>
         <p class="card_texto">

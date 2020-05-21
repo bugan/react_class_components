@@ -6,24 +6,14 @@ class FormCadastro extends Component {
     return (
       <div class="form-cadastro_container">
         <form class="form-cadastro">
-          <input
-            type="text"
-            name="titulo"
-            placeholder="Título"
-            class="form-cadastro_input"
-          />
-          <textarea
-            name="conteudo"
-            placeholder="Nota"
-            class="form-cadastro_input"
-            rows="15"
-          />
+          <label>Título</label>
+          <input type="text" placeholder="Título" class="form-cadastro_input" />
+          <label>Conteúdo</label>
+          <textarea placeholder="Nota" class="form-cadastro_input" rows="15" />
 
-          <input
-            type="submit"
-            value="Criar"
-            class="form-cadastro_input form-cadastro_submit"
-          />
+          <button class="form-cadastro_input form-cadastro_submit">
+            Criar
+          </button>
         </form>
       </div>
     );

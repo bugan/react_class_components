@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
-import BarraBusca from "./componentes/BarraBusca/BarraBusca";
-import ContainerCategorias from "./componentes/ContainerNotas/ContainerNotas";
-import FormCadastro from "./componentes/FormCadastro/FormCadastro";
+import "./assets/App.css";
+import BarraBusca from "./componentes/BarraBusca";
+import ContainerNotas from "./componentes/ContainerNotas";
+import FormCadastro from "./componentes/FormCadastro";
 function App() {
   return (
     <div className="App">
       <BarraBusca />
-      <section class="conteudo_container">
+      <section class="conteudo_principal">
         <FormCadastro />
-        <ContainerCategorias />
+        <ContainerNotas />
       </section>
     </div>
   );

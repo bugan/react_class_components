@@ -6,26 +6,15 @@ class ContainerNotas extends Component {
   state = {};
   render() {
     return (
-      <main class="container-notas">
-        <ul class="container-notas_lista">
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
+      <main className="container-notas">
+        <ul className="container-notas_lista">
+          {this.props.dados.map((element) => {
+            return (
+              <li className="container-notas_item">
+                <Card />
+              </li>
+            );
+          })}
         </ul>
       </main>
     );

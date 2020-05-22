@@ -5,12 +5,12 @@ class Card extends Component {
   state = {};
   render() {
     return (
-      <section class="card">
-        <header class="card_cabecalho">
-          <h3 class="card_titulo">Titulo</h3>
-          <div class="card_titulo_categoria">Categoria</div>
+      <section className="card">
+        <header className="card_cabecalho">
+          <h3 className="card_titulo">Titulo</h3>
+          <div className="card_titulo_categoria">Categoria</div>
         </header>
-        <p class="card_texto">
+        <p className="card_texto">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quo
           ducimus laborum ad.
         </p>

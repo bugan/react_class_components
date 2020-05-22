@@ -6,9 +6,9 @@ class BarraBusca extends Component {
   render() {
     return (
       <article>
-        <form class="barra-busca">
-          <label class="barra-busca_titulo">Buscar:</label>
-          <input type="text" nome="filtro" class="barra-busca_input" />
+        <form className="barra-busca">
+          <label className="barra-busca_titulo">Buscar:</label>
+          <input type="text" nome="filtro" className="barra-busca_input" />
         </form>
       </article>
     );

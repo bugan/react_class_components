@@ -11,7 +11,7 @@ class ContainerNotas extends Component {
           {this.props.dados.map((element) => {
             return (
               <li className="container-notas_item">
-                <Card />
+                <Card titulo={element.titulo} texto={element.texto} />
               </li>
             );
           })}

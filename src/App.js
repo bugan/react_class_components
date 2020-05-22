@@ -17,7 +17,10 @@ class App extends Component {
         <BarraBusca />
         <section className="conteudo_principal">
           <FormCadastro criarCard={this.criarCard.bind(this)} />
-          <ContainerNotas dados={this.state.notas} />
+          <ContainerNotas
+            dados={this.state.notas}
+            apagarCard={this.apagarCard.bind(this)}
+          />
         </section>
       </div>
     );
@@ -25,6 +28,11 @@ class App extends Component {
 
   criarCard(titulo, texto) {
     this.notas.criarCard(titulo, texto);
+    this.setState({ notas: this.notas.notas });
+  }
+
+  apagarCard(index) {
+    this.notas.notas.splice(index, 1);
     this.setState({ notas: this.notas.notas });
   }
 }

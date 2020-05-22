@@ -8,10 +8,15 @@ class ContainerNotas extends Component {
     return (
       <main className="container-notas">
         <ul className="container-notas_lista">
-          {this.props.dados.map((element) => {
+          {this.props.dados.map((element, i) => {
             return (
               <li className="container-notas_item">
-                <Card titulo={element.titulo} texto={element.texto} />
+                <Card
+                  titulo={element.titulo}
+                  texto={element.texto}
+                  apagarCard={this.props.apagarCard}
+                  index={i}
+                />
               </li>
             );
           })}

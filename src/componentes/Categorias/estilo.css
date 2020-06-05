@@ -1,0 +1,19 @@
+.categorias {
+  display: flex;
+}
+
+.categorias-lista {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex: 2;
+}
+
+.categorias-lista_item {
+  padding: 10px;
+}
+
+.categoria-texto::before {
+  content: "•";
+  font-size: 1.4em;
+}

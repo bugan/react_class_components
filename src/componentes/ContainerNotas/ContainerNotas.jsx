@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../Cards/Cards";
+import Categorias from "../Categorias/Categorias";
 import "./estilo.css";
 
 class ContainerNotas extends Component {
@@ -7,6 +8,7 @@ class ContainerNotas extends Component {
   render() {
     return (
       <main className="container-notas">
+        <Categorias categorias={this.props.categorias} />
         <ul className="container-notas_lista">
           {this.props.dados.map((element, i) => {
             return (

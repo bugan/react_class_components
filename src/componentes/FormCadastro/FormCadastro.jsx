@@ -1,15 +1,39 @@
 import React, { Component } from "react";
 import "./estilo.css";
 class FormCadastro extends Component {
-  state = {
-    titulo: "Título",
-    nota: "Escreva seu texto aqui....",
-  };
+  constructor() {
+    super();
+    this.state = {
+      titulo: "",
+      nota: "",
+      categorias: [],
+    };
+    this.novaCategoria = this.novaCategoria.bind(this);
+  }
 
+  componentDidMount() {
+    this.props.categorias.inscrever(this.novaCategoria);
+  }
+
+  componentWillUnmount() {
+    this.props.categorias.desiscrever(this.novaCategoria);
+  }
+
+  novaCategoria(categorias) {
+    const novo = { ...this.state };
+    novo.categorias = categorias;
+    this.setState(novo);
+  }
   render() {
     return (
       <div className="form-cadastro_container">
         <form className="form-cadastro">
+          <label>Categoria</label>
+          <select className="form-cadastro_input">
+            {this.state.categorias.map((categoria) => {
+              return <option>{categoria}</option>;
+            })}
+          </select>
           <label>Título</label>
           <input
             type="text"

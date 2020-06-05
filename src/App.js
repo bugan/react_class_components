@@ -4,10 +4,12 @@ import BarraBusca from "./componentes/BarraBusca";
 import ContainerNotas from "./componentes/ContainerNotas";
 import FormCadastro from "./componentes/FormCadastro";
 import { Notas } from "./dados/Notas";
+import { Categorias } from "./dados/Categorias";
 class App extends Component {
   constructor() {
     super();
     this.notas = new Notas();
+    this.categorias = new Categorias();
     this.state = { notas: [] };
   }
 
@@ -16,10 +18,14 @@ class App extends Component {
       <div className="App">
         <BarraBusca />
         <section className="conteudo_principal">
-          <FormCadastro criarCard={this.criarCard.bind(this)} />
+          <FormCadastro
+            criarCard={this.criarCard.bind(this)}
+            categorias={this.categorias}
+          />
           <ContainerNotas
             dados={this.state.notas}
             apagarCard={this.apagarCard.bind(this)}
+            categorias={this.categorias}
           />
         </section>
       </div>

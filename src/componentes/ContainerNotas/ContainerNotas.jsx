@@ -1,31 +1,27 @@
 import React, { Component } from "react";
 import Card from "../Cards/Cards";
+import Categorias from "../Categorias/Categorias";
 import "./estilo.css";
 
 class ContainerNotas extends Component {
   state = {};
   render() {
     return (
-      <main class="container-notas">
-        <ul class="container-notas_lista">
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
-          <li class="container-notas_item">
-            <Card />
-          </li>
+      <main className="container-notas">
+        <Categorias categorias={this.props.categorias} />
+        <ul className="container-notas_lista">
+          {this.props.dados.map((element, i) => {
+            return (
+              <li className="container-notas_item">
+                <Card
+                  titulo={element.titulo}
+                  texto={element.texto}
+                  apagarCard={this.props.apagarCard}
+                  index={i}
+                />
+              </li>
+            );
+          })}
         </ul>
       </main>
     );

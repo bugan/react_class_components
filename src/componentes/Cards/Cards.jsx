@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import "./estilo.css";
-
+import Deletar from "./Deletar";
 class Card extends Component {
-  state = {};
   render() {
     return (
-      <section class="card">
-        <header class="card_titulo">
-          <h3>Titulo</h3>
-          <div class="card_titulo_categoria">Categoria</div>
+      <section className="card">
+        <header className="card_cabecalho">
+          <h3 className="card_titulo">{this.props.titulo}</h3>
+          <Deletar apagarCard={this.apagarCard.bind(this)} />
         </header>
-        <p class="card_texto">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt quo
-          ducimus laborum ad.
-        </p>
+        <p className="card_texto">{this.props.texto}</p>
       </section>
     );
+  }
+
+  apagarCard() {
+    this.props.apagarCard(this.props.index);
   }
 }
 
